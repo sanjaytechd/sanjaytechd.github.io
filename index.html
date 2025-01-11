@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Professional Portfolio - Sanjay N</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    
+    <!-- Custom CSS -->
+    <style>
+      /* General Styling */
+      body {
+        font-family: "Roboto", sans-serif;
+        line-height: 1.6;
+        color: #333;
+      }
+      a {
+        text-decoration: none;
+      }
+      a:hover {
+        color: #007bff;
+      }
+      .section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: #333;
+        text-align: center;
+      }
+
+      /* Navbar Styling */
+      .navbar {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .navbar-brand {
+        font-size: 1.8rem;
+        font-weight: 700;
+      }
+      .nav-link {
+        font-weight: 500;
+        color: #333 !important;
+      }
+
+      /* Hero Section */
+      header {
+        /* background: linear-gradient(rgba(218, 234, 239, 0.594), rgba(0, 0, 0, 0.5)),
+          url("hero.jpg") no-repeat center center/cover; */
+        background: url("images/paint.png") no-repeat center center/cover;
+        height: 100vh;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      header h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        animation: fadeInDown 2s;
+      }
+      header p {
+        font-size: 1.2rem;
+        margin: 1rem 0;
+        animation: fadeInUp 2s;
+      }
+      header a {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: white;
+        background-color: #007bff;
+        padding: 0.8rem 1.5rem;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+      }
+      header a:hover {
+        background-color: #0056b3;
+      }
+
+      /* About Section */
+      #about .card {
+        transition: transform 0.3s ease;
+      }
+      #about .card:hover {
+        transform: scale(1.05);
+      }
+
+      /* Projects Section */
+      #projects .card {
+        border: none;
+        transition: all 0.3s ease;
+      }
+      #projects .card:hover {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Skills Section */
+      .progress-bar {
+        transition: width 1s ease-in-out;
+      }
+
+      /* Testimonials Section */
+      #testimonials .testimonial {
+        background: #f8f9fa;
+        padding: 2rem;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      #testimonials .testimonial img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+      }
+
+      /* Footer */
+      footer {
+        background: #333;
+        color: white;
+        padding: 1rem 0;
+        text-align: center;
+      }
+      .footer-link {
+        color: #007bff;
+      }
+
+      /* Animations */
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+
+    <!-- Hero Section -->
+    <header>
+
+      <div class="container">
+        <h1>Welcome to My Portfolio</h1>
+        <p class="lead">
+          I'm Sanjay N, Associate Data Engineer & AI-ML Enthusiast.
+        </p>
+        <a href="#projects" class="btn btn-lg">Explore My Work</a>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Who Am I?</h5>
+                <p class="card-text">
+                    I am a passionate data engineer with a keen interest in
+                    building scalable AI solutions.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Experience</h5>
+                <p class="card-text">
+                    Working as Associate Data Enginner @ DataSturdy.
+                    <br>
+                    Previously, Interned at Karostartup as ML intern.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+   <!-- Projects Section -->
+   <section id="projects" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card">
+            <img
+              src="images/file.png"
+              class="card-img-top"
+              alt="Dementia Detection"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Document Extraction</h5>
+              <p class="card-text">
+                Streamlined document extraction workflows for PPT, PDF, and DOCX files, 
+                converting content for improved chatbot query responses.
+              </p>
+              <!-- <a href="#" class="btn btn-primary">Learn More</a> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="images/crawling.png" class="card-img-top" alt="Quiz Game" />
+            <div class="card-body">
+              <h5 class="card-title">Web Scarping</h5>
+              <p class="card-text">
+                Developed and optimized web scraping solutions to extract and store data from websites, 
+                enabling efficient retrieval and integration into chatbot systems.
+              </p>
+              <!-- <a href="#" class="btn btn-primary">Learn More</a> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img
+              src="images/ai-brain.png"
+              class="card-img-top"
+              alt="Web Scraping"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Autogen-Agentic AI</h5>
+              <p class="card-text">
+                Implemented and optimized the Autogen Multi-Agent Framework 
+                to enhance chatbot autonomy and performance in complex tasks.
+              </p>
+              <!-- <a href="#" class="btn btn-primary">Learn More</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    <!-- Projects Section -->
+    <section id="projects" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="section-title">Academic Projects</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                src="images/heart-rate.png"
+                class="card-img-top"
+                alt="Dementia Detection"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Dementia Detection</h5>
+                <p class="card-text">
+                  Built a predictive system with SVM and CNN achieving 97%
+                  accuracy.
+                </p>
+                <!-- <a href="#" class="btn btn-primary">Learn More</a> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="images/quiz.png" class="card-img-top" alt="Quiz Game" />
+              <div class="card-body">
+                <h5 class="card-title">Quiz Game</h5>
+                <p class="card-text">
+                  Interactive Android game with category-wise quizzes.
+                </p>
+                <!-- <a href="#" class="btn btn-primary">Learn More</a> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img
+                src="images/detective.png"
+                class="card-img-top"
+                alt="Web Scraping"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Face Mask Detection</h5>
+                <p class="card-text">
+                    Developed a Face Mask Detection system using a CNN model, achieving 95% accuracy.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--
+  <!-- Skills Section -->
+    <section id="skills" class="py-5">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <h5>Technical Skills</h5>
+            <ul>
+              <li>
+                <strong>Languages:</strong> Python, SQL, Java, Kotlin, HTML,
+                CSS
+              </li>
+              <li>
+                <strong>AI/ML:</strong> LLM, Autogen, CrewAI, Tessaract, EasyOCR, 
+                OpenAI, Azure Cognitive services, LlamaIndex, ElasticSearch.
+              </li>
+              <li><strong>Tools:</strong>Power BI, VS Code, Figma</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h5>Proficiency</h5>
+            <div class="progress mb-3">
+              <div
+                class="progress-bar bg-success"
+                role="progressbar"
+                style="width: 95%"
+              >
+                Python - 95%
+              </div>
+            </div>
+            <div class="progress mb-3">
+              <div
+                class="progress-bar bg-info"
+                role="progressbar"
+                style="width: 90%"
+              >
+                AI/ML - 90%
+              </div>
+            </div>
+            <div class="progress mb-3">
+              <div
+                class="progress-bar bg-warning"
+                role="progressbar"
+                style="width: 80%"
+              >
+                SQL - 80%
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-5 bg-dark text-white">
+    <div class="container">
+      <h2 class="section-title">Contact Me</h2>
+      <p class="text-center">
+        Let’s collaborate! Reach out for projects, ideas, or queries.
+      </p>
+      <p class="text-center">
+        <strong><i class="fas fa-envelope"></i></strong> sanjaynbe2303@gmail.com<br>
+        <strong><i class="fas fa-phone"></i></strong> +91-8951427835<br>
+        <strong><i class="fab fa-linkedin"></i></strong> <a href="https://www.linkedin.com/in/sanjay-narayan-73681a202/" target="_blank" class="text-white">sanjay-narayan</a><br>
+        <strong><i class="fab fa-github"></i><a href="https://github.com/sanjaytechd" target="_blank" class="text-white">sanjaytechd</a>
+      </p>
+    </div>
+  </section>  
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
