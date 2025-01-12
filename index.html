@@ -57,8 +57,6 @@
 
       /* Hero Section */
       header {
-        /* background: linear-gradient(rgba(218, 234, 239, 0.594), rgba(0, 0, 0, 0.5)),
-          url("hero.jpg") no-repeat center center/cover; */
         background: url("images/paint.png") no-repeat center center/cover;
         height: 100vh;
         color: white;
@@ -112,8 +110,6 @@
         transition: width 1s ease-in-out;
       }
 
-      
-
       /* Footer */
       footer {
         background: #333;
@@ -125,8 +121,8 @@
         color: #007bff;
       }
 
-            /* Light/Dark Mode Toggle */
-            .mode-toggle {
+      /* Light/Dark Mode Toggle */
+      .mode-toggle {
         position: absolute;
         top: 20px;
         right: 20px;
@@ -160,7 +156,6 @@
       body.dark-mode .mode-toggle{
         color: white;
         background: black;
-
       }
       body.dark-mode .nav-link {
         color: #f8f9fa !important;
@@ -180,12 +175,46 @@
         background-color: #2d2d2d;
         color: #f8f9fa;
       }
+      body.dark-mode .dropdown-content {
+        background-color: #2d2d2d;
+        color: #f8f9fa;
+      }
 
       .card-body {
         transition: background-color 0.3s ease;
       }
       body.dark-mode .card-body {
         background-color: #444;
+      }
+      body.dark-mode  .dropdown-content p {
+        color: white;
+      }
+      /* Elevated Dropdown Button */
+      .dropdown-btn {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-color: rgba(255, 255, 255, 0.6); /* Slightly opaque */
+        border: 2px solid #007bff;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        color: #007bff;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      .dropdown-btn:hover {
+        background-color: rgba(0, 123, 255, 0.7); /* Darker background on hover */
+        color: #fff;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .dropdown-btn i {
+        margin: 0;
       }
 
       /* Animations */
@@ -210,10 +239,24 @@
           transform: translateY(0);
         }
       }
+
+      /* Dropdown content */
+      .dropdown-content {
+        display: none;
+        margin-top: 10px;
+        background-color: white;
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .dropdown-content p {
+        color: #333;
+      }
+
+    
     </style>
   </head>
   <body>
-
 
     <!-- Hero Section -->
     <header>
@@ -225,8 +268,8 @@
         </p>
         <a href="#projects" class="btn btn-lg">Explore My Work</a>
       </div>
-       <!-- Light/Dark Mode Toggle Icon -->
-       <div class="mode-toggle" onclick="toggleMode()">
+      <!-- Light/Dark Mode Toggle Icon -->
+      <div class="mode-toggle" onclick="toggleMode()">
         <i id="mode-icon" class="fas fa-sun"></i>
       </div>
     </header>
@@ -241,9 +284,19 @@
               <div class="card-body">
                 <h5 class="card-title">Who Am I?</h5>
                 <p class="card-text">
-                    I am a passionate data engineer with a keen interest in
-                    building scalable AI solutions.
+                  I am a passionate data engineer with a keen interest in
+                  building scalable AI solutions.
                 </p>
+                <!-- Styled Button with Down Arrow -->
+                <button class="dropdown-btn" onclick="toggleDropdown('dropdown-1')">
+                  <i class="fas fa-chevron-down"></i>
+                </button>
+                <div id="dropdown-1" class="dropdown-content">
+                  <p><strong> EDUCATION:</strong><br>
+                    Bachelor of Engineering (Computer Science) at <strong>JSSATEB</strong>  2020 - 2024 (CGPA: 8.9/10.0)<br>
+PUC at <strong>RNS Composite PU College</strong> 2018 - 2020 (91.12%)<br>
+Class 10th at <strong>ST.Philomena’s Memorial High School</strong> 2018  (93.16%)<br></p><br>
+                </div>
               </div>
             </div>
           </div>
@@ -252,116 +305,69 @@
               <div class="card-body">
                 <h5 class="card-title">Experience</h5>
                 <p class="card-text">
-                    Working as Associate Data Enginner @ DataSturdy.
-                    <br>
-                    Previously, Interned at Karostartup as ML intern.
+                  Currently, Working as Associate Data Engineer @ <strong>Consulting Private Limited.</strong> 
                 </p>
+                <!-- Styled Button with Down Arrow -->
+                <button class="dropdown-btn" onclick="toggleDropdown('dropdown-2')">
+                  <i class="fas fa-chevron-down"></i>
+                </button>
+                <div id="dropdown-2" class="dropdown-content">
+                  <p><strong>INTERNSHIPS</strong><br>
+                    Intern @ <strong>DataSturdy Consulting Private Limited</strong> <br>Aug 2024 - Oct 2024<br>
+                    Machine Learning Intern @ <strong>Karostartup</strong><br>Nov 2023 - Jan 2024
+                </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-   <!-- Projects Section -->
-   <section id="projects" class="py-5">
-    <div class="container">
-      <h2 class="section-title">Projects</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card">
-            <img
-              src="images/file.png"
-              class="card-img-top"
-              alt="Dementia Detection"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Document Extraction</h5>
-              <p class="card-text">
-                Streamlined document extraction workflows for PPT, PDF, and DOCX files, 
-                converting content for improved chatbot query responses.
-              </p>
-              <!-- <a href="#" class="btn btn-primary">Learn More</a> -->
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img src="images/crawling.png" class="card-img-top" alt="Quiz Game" />
-            <div class="card-body">
-              <h5 class="card-title">Web Scarping</h5>
-              <p class="card-text">
-                Developed and optimized web scraping solutions to extract and store data from websites, 
-                enabling efficient retrieval and integration into chatbot systems.
-              </p>
-              <!-- <a href="#" class="btn btn-primary">Learn More</a> -->
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <img
-              src="images/ai-brain.png"
-              class="card-img-top"
-              alt="Web Scraping"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Autogen-Agentic AI</h5>
-              <p class="card-text">
-                Implemented and optimized the Autogen Multi-Agent Framework 
-                to enhance chatbot autonomy and performance in complex tasks.
-              </p>
-              <!-- <a href="#" class="btn btn-primary">Learn More</a> -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+
     <!-- Projects Section -->
     <section id="projects" class="py-5">
       <div class="container">
-        <h2 class="section-title">Academic Projects</h2>
+        <h2 class="section-title">Projects</h2>
         <div class="row g-4">
           <div class="col-md-4">
             <div class="card">
               <img
-                src="images/heart-rate.png"
+                src="images/file.png"
                 class="card-img-top"
                 alt="Dementia Detection"
               />
               <div class="card-body">
-                <h5 class="card-title">Dementia Detection</h5>
+                <h5 class="card-title">Document Extraction</h5>
                 <p class="card-text">
-                  Built a predictive system with SVM and CNN achieving 97%
-                  accuracy.
+                  Streamlined document extraction workflows for PPT, PDF, and DOCX files,
+                  converting content for improved chatbot query responses.
                 </p>
-                <!-- <a href="#" class="btn btn-primary">Learn More</a> -->
               </div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="card">
-              <img src="images/quiz.png" class="card-img-top" alt="Quiz Game" />
+              <img src="images/crawling.png" class="card-img-top" alt="Quiz Game" />
               <div class="card-body">
-                <h5 class="card-title">Quiz Game</h5>
+                <h5 class="card-title">Web Scraping</h5>
                 <p class="card-text">
-                  Interactive Android game with category-wise quizzes.
+                  Developed and optimized web scraping solutions to extract and store data from websites,
+                  enabling efficient retrieval and integration into chatbot systems.
                 </p>
-                <!-- <a href="#" class="btn btn-primary">Learn More</a> -->
               </div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="card">
               <img
-                src="images/detective.png"
+                src="images/ai-brain.png"
                 class="card-img-top"
                 alt="Web Scraping"
               />
               <div class="card-body">
-                <h5 class="card-title">Face Mask Detection</h5>
+                <h5 class="card-title">Autogen-Agentic AI</h5>
                 <p class="card-text">
-                    Developed a Face Mask Detection system using a CNN model, achieving 95% accuracy.
+                  Implemented and optimized the Autogen Multi-Agent Framework to enhance chatbot autonomy and performance in complex tasks.
                 </p>
               </div>
             </div>
@@ -369,79 +375,129 @@
         </div>
       </div>
     </section>
-
-    <!--
-  <!-- Skills Section -->
-    <section id="skills" class="py-5">
-      <div class="container">
-        <h2 class="section-title">Skills</h2>
-        <div class="row g-4">
-          <div class="col-md-6">
-            <h5>Technical Skills</h5>
-            <ul>
-              <li>
-                <strong>Languages:</strong> Python, SQL, Java, Kotlin, HTML,
-                CSS
-              </li>
-              <li>
-                <strong>AI/ML:</strong> LLM, Autogen, CrewAI, Tessaract, EasyOCR, 
-                OpenAI, Azure Cognitive services, LlamaIndex, ElasticSearch.
-              </li>
-              <li><strong>Tools:</strong>Power BI, VS Code, Figma</li>
-            </ul>
-          </div>
-          <div class="col-md-6">
-            <h5>Proficiency</h5>
-            <div class="progress mb-3">
-              <div
-                class="progress-bar bg-success"
-                role="progressbar"
-                style="width: 95%"
-              >
-                Python - 95%
+     <!-- Projects Section -->
+     <section id="projects" class="py-5">
+        <div class="container">
+          <h2 class="section-title">Academic Projects</h2>
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="card">
+                <img
+                  src="images/heart-rate.png"
+                  class="card-img-top"
+                  alt="Dementia Detection"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Dementia Detection</h5>
+                  <p class="card-text">
+                    Built a predictive system with SVM and CNN achieving 97%
+                    accuracy.
+                  </p>
+                  <!-- <a href="#" class="btn btn-primary">Learn More</a> -->
+                </div>
               </div>
             </div>
-            <div class="progress mb-3">
-              <div
-                class="progress-bar bg-info"
-                role="progressbar"
-                style="width: 90%"
-              >
-                AI/ML - 90%
+            <div class="col-md-4">
+              <div class="card">
+                <img src="images/quiz.png" class="card-img-top" alt="Quiz Game" />
+                <div class="card-body">
+                  <h5 class="card-title">Quiz Game</h5>
+                  <p class="card-text">
+                    Interactive Android game with category-wise quizzes.
+                  </p>
+                  <!-- <a href="#" class="btn btn-primary">Learn More</a> -->
+                </div>
               </div>
             </div>
-            <div class="progress mb-3">
-              <div
-                class="progress-bar bg-warning"
-                role="progressbar"
-                style="width: 80%"
-              >
-                SQL - 80%
+            <div class="col-md-4">
+              <div class="card">
+                <img
+                  src="images/detective.png"
+                  class="card-img-top"
+                  alt="Web Scraping"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Face Mask Detection</h5>
+                  <p class="card-text">
+                      Developed a Face Mask Detection system using a CNN model, achieving 95% accuracy.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
+      </section>
+  
+      <!--
+    <!-- Skills Section -->
+      <section id="skills" class="py-5">
+        <div class="container">
+          <h2 class="section-title">Skills</h2>
+          <div class="row g-4">
+            <div class="col-md-6">
+              <h5>Technical Skills</h5>
+              <ul>
+                <li>
+                  <strong>Languages:</strong> Python, SQL, Java, Kotlin, HTML,
+                  CSS
+                </li>
+                <li>
+                  <strong>AI/ML:</strong> LLM, Autogen, CrewAI, Tessaract, EasyOCR, 
+                  OpenAI, Azure Cognitive services, LlamaIndex, ElasticSearch.
+                </li>
+                <li><strong>Tools:</strong>Power BI, VS Code, Figma</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <h5>Proficiency</h5>
+              <div class="progress mb-3">
+                <div
+                  class="progress-bar bg-success"
+                  role="progressbar"
+                  style="width: 95%"
+                >
+                  Python - 95%
+                </div>
+              </div>
+              <div class="progress mb-3">
+                <div
+                  class="progress-bar bg-info"
+                  role="progressbar"
+                  style="width: 90%"
+                >
+                  AI/ML - 90%
+                </div>
+              </div>
+              <div class="progress mb-3">
+                <div
+                  class="progress-bar bg-warning"
+                  role="progressbar"
+                  style="width: 80%"
+                >
+                  SQL - 80%
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-dark text-white">
+      <div class="container">
+        <h2 class="section-title">Contact Me</h2>
+        <p class="text-center">
+          Let’s collaborate! Reach out for projects, ideas, or queries.
+        </p>
+        <p class="text-center">
+          <strong><i class="fas fa-envelope"></i></strong> sanjaynbe2303@gmail.com<br />
+          <strong><i class="fas fa-phone"></i></strong> +91-8951427835<br />
+          <strong><i class="fab fa-linkedin"></i></strong> <a href="https://www.linkedin.com/in/sanjay-narayan-73681a202/" target="_blank" class="text-white">sanjay-narayan</a><br />
+          <strong><i class="fab fa-github"></i></strong> <a href="https://github.com/sanjaytechd" target="_blank" class="text-white">sanjaytechd</a>
+        </p>
       </div>
     </section>
 
-<!-- Contact Section -->
-<section id="contact" class="py-5 bg-dark text-white">
-    <div class="container">
-      <h2 class="section-title">Contact Me</h2>
-      <p class="text-center">
-        Let’s collaborate! Reach out for projects, ideas, or queries.
-      </p>
-      <p class="text-center">
-        <strong><i class="fas fa-envelope"></i></strong> sanjaynbe2303@gmail.com<br>
-        <strong><i class="fas fa-phone"></i></strong> +91-8951427835<br>
-        <strong><i class="fab fa-linkedin"></i></strong> <a href="https://www.linkedin.com/in/sanjay-narayan-73681a202/" target="_blank" class="text-white">sanjay-narayan</a><br>
-        <strong><i class="fab fa-github"></i><a href="https://github.com/sanjaytechd" target="_blank" class="text-white">sanjaytechd</a>
-      </p>
-    </div>
-  </section>  
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
+    <!-- JavaScript -->
     <script>
       function toggleMode() {
         // Toggle dark mode
@@ -457,7 +513,13 @@
           modeIcon.classList.add("fa-sun");
         }
       }
+
+      function toggleDropdown(dropdownId) {
+        const dropdown = document.getElementById(dropdownId);
+        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+      }
     </script>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
