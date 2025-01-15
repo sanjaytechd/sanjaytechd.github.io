@@ -87,7 +87,10 @@
       header a:hover {
         background-color: #0056b3;
       }
-
+      .py-5 {
+    padding-top: 3rem !important;
+    padding-bottom: 0 !important; /* Remove bottom padding */
+}
       /* About Section */
       #about .card {
         transition: transform 0.3s ease;
@@ -264,7 +267,8 @@
       <div class="container">
         <h1>Welcome to My Portfolio</h1>
         <p class="lead">
-          I'm Sanjay N, Associate Data Engineer & AI-ML Enthusiast.
+          I'm Sanjay N, Associate Data Engineer.<br>
+           AI-ML and DevOps Enthusiast.
         </p>
         <a href="#projects" class="btn btn-lg">Explore My Work</a>
       </div>
@@ -295,7 +299,7 @@
                   <p><strong> EDUCATION:</strong><br>
                     Bachelor of Engineering (Computer Science) at <strong>JSSATEB</strong>  2020 - 2024 (CGPA: 8.9/10.0)<br>
 PUC at <strong>RNS Composite PU College</strong> 2018 - 2020 (91.12%)<br>
-Class 10th at <strong>ST.Philomena’s Memorial High School</strong> 2018  (93.16%)<br></p><br>
+Class 10th at <strong>ST.Philomena’s Memorial High School</strong> 2018  (93.16%)<br></p>
                 </div>
               </div>
             </div>
@@ -325,58 +329,197 @@ Class 10th at <strong>ST.Philomena’s Memorial High School</strong> 2018  (93.1
       </div>
     </section>
 
-    <!-- Projects Section -->
+        <!-- AI Projects Section -->
+        <section id="projects" class="py-5">
+            <div class="container">
+              <h2 class="section-title">AI Projects</h2>
+              <div class="row g-4">
+                <div class="col-md-4">
+                  <div class="card">
+                    <img
+                      src="images/file.png"
+                      class="card-img-top"
+                      alt="Dementia Detection"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Document Extraction</h5>
+                      <p class="card-text">
+                        Streamlined document extraction workflows for PPT, PDF, and DOCX files,
+                        converting content for improved chatbot query responses.
+                      </p>
+                           <!-- Styled Button with Down Arrow -->
+                <button class="dropdown-btn" onclick="toggleDropdown('dropdown-6')">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                  <div id="dropdown-6" class="dropdown-content">
+                    <p><strong> TOOLS:</strong><br>
+                        Python<br>
+                      Azure OpenAI Services<br>
+                      Text Extraction<br>
+                      Semantic Chunking<br>
+                      Embeddings<br>
+                      Elastic Search<br>
+                    </p>
+                  </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card">
+                    <img src="images/crawling.png" class="card-img-top" alt="Quiz Game" />
+                    <div class="card-body">
+                      <h5 class="card-title">Web Scraping</h5>
+                      <p class="card-text">
+                        Developed and optimized web scraping solutions to extract and store data from websites,
+                        enabling efficient retrieval and integration into chatbot systems.
+                      </p>
+                                 <!-- Styled Button with Down Arrow -->
+                <button class="dropdown-btn" onclick="toggleDropdown('dropdown-7')">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                  <div id="dropdown-7" class="dropdown-content">
+                    <p><strong> TOOLS:</strong><br>
+                      Python<br>
+                      Beautiful Soup<br>
+                      Recursive Scrapping<br>
+                      Data Cleaning<br>
+                      Elastic Search<br>
+                    </p>
+                  </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card">
+                    <img
+                      src="images/ai-brain.png"
+                      class="card-img-top"
+                      alt="Web Scraping"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Autogen-Agentic AI</h5>
+                      <p class="card-text">
+                        Implemented and optimized the Autogen Multi-Agent Framework to enhance chatbot autonomy and performance in complex tasks.
+                      </p>
+                                         <!-- Styled Button with Down Arrow -->
+                <button class="dropdown-btn" onclick="toggleDropdown('dropdown-8')">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                  <div id="dropdown-8" class="dropdown-content">
+                    <p><strong> TOOLS:</strong><br>
+                      Python<br>
+                      Autogen ag2<br>
+                      SQL Agent and Tools<br>
+                      Document Agent and Tools<br>
+                      Prompt Engineering<br>
+                      Azure OpenAI Services<br>
+                      Multi-Agent Communication<br>
+                    </p>
+                  </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+            <!-- DevOps Projects Section -->
     <section id="projects" class="py-5">
-      <div class="container">
-        <h2 class="section-title">Projects</h2>
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div class="card">
-              <img
-                src="images/file.png"
-                class="card-img-top"
-                alt="Dementia Detection"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Document Extraction</h5>
-                <p class="card-text">
-                  Streamlined document extraction workflows for PPT, PDF, and DOCX files,
-                  converting content for improved chatbot query responses.
-                </p>
+        <div class="container">
+          <h2 class="section-title">DevOps Projects</h2>
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="card">
+                <img
+                  src="images\devops.png"
+                  class="card-img-top"
+                  alt="Dementia Detection"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Finance me</h5>
+                  <p class="card-text">
+                    Automated and streamlined the CI/CD pipeline, improving deployment efficiency and system scalability. 
+                    Implemented continuous monitoring to track server performance and ensure operational reliability.
+                  </p>
+                    <!-- Styled Button with Down Arrow -->
+                <button class="dropdown-btn" onclick="toggleDropdown('dropdown-3')">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                  <div id="dropdown-3" class="dropdown-content">
+                    <p><strong> TOOLS:</strong><br>
+                      GIT & GUTHUB<br>
+                      TERRAFORM<br>
+                      AWS SERVICES: EC2, IAM, SG, EBS<br>
+                      ANSIBLE<br>
+                      JENKINS<br>
+                      DOCKER<br>
+                      PROMETHEUS & GRAFANA<br>
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img src="images/crawling.png" class="card-img-top" alt="Quiz Game" />
-              <div class="card-body">
-                <h5 class="card-title">Web Scraping</h5>
-                <p class="card-text">
-                  Developed and optimized web scraping solutions to extract and store data from websites,
-                  enabling efficient retrieval and integration into chatbot systems.
-                </p>
+            <div class="col-md-4">
+              <div class="card">
+                <img src="images\medical-service.png" class="card-img-top" alt="Quiz Game" />
+                <div class="card-body">
+                  <h5 class="card-title">Medicure</h5>
+                  <p class="card-text">
+                    Automated the CI/CD pipeline for a healthcare network, improving deployment efficiency and scalability.
+                     Streamlined transitions to test and production environments.
+                  </p>
+                        <!-- Styled Button with Down Arrow -->
+                <button class="dropdown-btn" onclick="toggleDropdown('dropdown-4')">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                  <div id="dropdown-4" class="dropdown-content">
+                    <p><strong> TOOLS:</strong><br>
+                        GIT & GUTHUB<br>
+                        TERRAFORM<br>
+                        AWS SERVICES: EC2, IAM, SG, EBS<br>
+                        ANSIBLE<br>
+                        JENKINS<br>
+                        DOCKER<br>
+                        KUBERNETES<br>
+                        PROMETHEUS & GRAFANA<br>
+                      </p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img
-                src="images/ai-brain.png"
-                class="card-img-top"
-                alt="Web Scraping"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Autogen-Agentic AI</h5>
-                <p class="card-text">
-                  Implemented and optimized the Autogen Multi-Agent Framework to enhance chatbot autonomy and performance in complex tasks.
-                </p>
+            <div class="col-md-4">
+              <div class="card">
+                <img
+                  src="images\insurance.png"
+                  class="card-img-top"
+                  alt="Web Scraping"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Insure me</h5>
+                  <p class="card-text">
+                    Automated the CI/CD pipeline for an insurance domain project. 
+                    Enabled seamless packaging, and deployment to test and production environments with minimal manual effort.
+                  </p>
+                        <!-- Styled Button with Down Arrow -->
+                <button class="dropdown-btn" onclick="toggleDropdown('dropdown-5')">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                  <div id="dropdown-5" class="dropdown-content">
+                    <p><strong> TOOLS:</strong><br>
+                        GIT & GUTHUB<br>
+                        AWS SERVICES: EC2, SG, EBS<br>
+                        ANSIBLE<br>
+                        JENKINS<br>
+                        DOCKER<br>
+                      </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-     <!-- Projects Section -->
+      </section>
+     <!-- Academic Projects Section -->
      <section id="projects" class="py-5">
         <div class="container">
           <h2 class="section-title">Academic Projects</h2>
@@ -446,7 +589,11 @@ Class 10th at <strong>ST.Philomena’s Memorial High School</strong> 2018  (93.1
                   <strong>AI/ML:</strong> LLM, Autogen, CrewAI, Tessaract, EasyOCR, 
                   OpenAI, Azure Cognitive services, LlamaIndex, ElasticSearch.
                 </li>
-                <li><strong>Tools:</strong>Power BI, VS Code, Figma</li>
+                <li>
+                    <strong>DevOps:</strong> 
+                    <ol><strong>AWS services:</strong>EC2, S3, Cloud Watch, EBS, IAM , AMI.</ol>
+                 <ol><strong>CICD:</strong> Git & GitHub, Linux, Jenkins, Docker, Kubernetes, Ansible, Terraform, Prometheus, Grafana.</ol>  
+                  </li>
               </ul>
             </div>
             <div class="col-md-6">
@@ -478,10 +625,65 @@ Class 10th at <strong>ST.Philomena’s Memorial High School</strong> 2018  (93.1
                   SQL - 80%
                 </div>
               </div>
+              <div class="progress mb-3">
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  style="width: 90%;background-color: brown;"
+                >
+                  DevOps- 90%
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
+        <!-- Certication Section -->
+     <section id="projects" class="py-5">
+        <div class="container">
+          <h2 class="section-title">Training and Certifications</h2>
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Devops Training @ STARAGILE</h5>
+                  <p class="card-text">
+                    During my DevOps certification at StarAgile, I gained hands-on experience with AWS services, and tools like Docker, Kubernetes, Jenkins, Terraform, and Ansible. 
+                    I automated CI/CD pipelines and infrastructure, enhancing system efficiency and scalability.
+                  </p>
+                  <!-- <a href="#" class="btn btn-primary">Learn More</a> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Certificates</h5>
+                  <p class="card-text">
+                    <li>DevOps Fundamentals</li>
+                    <li>Docker Essentials: A Developer Introduction</li>
+                    <li>Scalable Web Application on Kubernetes</li>
+                    <li>Microsoft AI-900: AI Fundamentals</li>
+                  </p>
+                  <!-- <a href="#" class="btn btn-primary">Learn More</a> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">AI-ML WorkShop @ ATS Learning Solutions</h5>
+                  <p class="card-text">
+                    Completed ATS Learning Solutions’ week-long workshop covering EDA, ML techniques, and algorithms,
+                    culminating in Microsoft AI-900 certification, showcasing proficiency in Azure AI Fundamentals.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
     <!-- Contact Section -->
     <section id="contact" class="py-5 bg-dark text-white">
       <div class="container">
